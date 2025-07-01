@@ -1,23 +1,17 @@
 // variable definitions
 const age = parseInt(prompt('Inserisci la tua età'))
 const km = parseInt(prompt('Inserisci i chilometri da percorrere'))
-const priceTicket = km * 0.21
-const priceChilds = priceTicket * (1 - 0.20)
-const priceOver = priceTicket * (1 - 0.40)
-const ageTwo = 18
-const ageThree = 65
+let priceTicket = km * 0.21
 
 // sconto minorenni
 if(age < 18){
-  console.log(priceChilds)
+  priceTicket = priceTicket * (1 - 0.20)
 }
 
 // sconto over 65
 if(age > 65){
-  console.log(priceOver)
+  priceTicket = priceTicket * (1 - 0.40)
 }
 
-// prezzo età compresa 18-65
-if(age >= ageTwo && age <= ageThree ){
-  console.log(priceTicket)
-}
+console.log(parseFloat(priceTicket.toFixed(2)))
+
