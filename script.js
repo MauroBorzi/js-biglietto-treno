@@ -9,3 +9,7 @@ if(age < 18){
   console.log(priceTicket * (1 - 0.20))
 }
 
+// sconto over 65
+if(age > 65){
+  console.log(priceTicket * (1 - 0.40))
+}
